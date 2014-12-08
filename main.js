@@ -39,7 +39,7 @@ function onPopulate(level, callback, query)
 {
     if (query != "") {
         query = query.trim().toLowerCase();
-        var url = new QUrl("http://api.soundcloud.com/tracks");
+        var url = new QUrl("http://api.soundcloud.com/tracks.xml");
         url.addQueryItem("q", query);
         url.addQueryItem("filter", "streamable");
         var downloader = new Downloader(url, displayResults);
